@@ -1,0 +1,6 @@
+n = int(input("Nhập giá trị n: "))
+lst = list(range(1, n + 1))
+so_nguyen_to = list(filter(lambda x: x > 1 and not any(map(lambda i: x % i == 0, range(2, int(x**0.5) + 1))),lst))
+so_hoan_hao = list(filter(lambda x: x > 1 and x == sum([i for i in range(1, x) if x % i == 0]),lst))
+print("Số nguyên tố:", so_nguyen_to)
+print("Số hoàn hảo:", so_hoan_hao)
