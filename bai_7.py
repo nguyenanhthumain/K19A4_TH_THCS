@@ -1,0 +1,5 @@
+s = input("Nhập chuỗi: ")
+s = s.strip()
+words = s.split()
+s = " ".join(words)
+print(s)
