@@ -1,7 +1,9 @@
+def luy_thua(n):
+    x = int(input("Nhập x: "))
+    kq = 1
+    for i in range(n):
+        kq *= x
+    return kq
+
 n = int(input("Nhập n: "))
-m = int(input("Nhập m: "))
-lst = [i**2 for i in range(1, n+1)]
-if m >= n:
-    print(lst)
-else:
-    print(lst[:m])
+print(luy_thua(n))

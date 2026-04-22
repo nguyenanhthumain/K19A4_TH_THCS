@@ -1,29 +1,43 @@
-lst = []
+def hinh_tron(r):
+    return 2*3.14*r, 3.14*r*r
 
-while True:
-    x = int(input("Nhập số (0 để dừng): "))
-    if x == 0:
-        break
-    lst.append(x)
-x = int(input("Tìm x: "))
-if x in lst:
-    print("Vị trí:", lst.index(x))
-else:
-    print("Không có")
-if x in lst:
-    new = int(input("Giá trị mới: "))
-    lst[lst.index(x)] = new
-print(lst)
-y = int(input("Nhập y: "))
-pos = int(input("Vị trí (0-đầu): "))
-lst.insert(pos, y)
-print(lst)
-for i in range(len(lst)):
-    for j in range(i+1, len(lst)):
-        if lst[i] < lst[j]:
-            lst[i], lst[j] = lst[j], lst[i]
-print(lst)
-del_index = int(input("Xóa vị trí: "))
-if 0 <= del_index < len(lst):
-    lst.pop(del_index)
-print(lst)
+def hinh_vuong(a):
+    return 4*a, a*a
+
+def hcn(a, b):
+    return 2*(a+b), a*b
+
+def tam_giac(a, b, c):
+    p = (a+b+c)/2
+    S = (p*(p-a)*(p-b)*(p-c))**0.5
+    return a+b+c, S
+
+print("1. Hình tròn")
+print("2. Hình vuông")
+print("3. HCN")
+print("4. Tam giác")
+
+chon = int(input("Chọn: "))
+
+if chon == 1:
+    r = float(input("r = "))
+    cv, dt = hinh_tron(r)
+    print("Chu vi:", cv, "Diện tích:", dt)
+
+elif chon == 2:
+    a = float(input("a = "))
+    cv, dt = hinh_vuong(a)
+    print("Chu vi:", cv, "Diện tích:", dt)
+
+elif chon == 3:
+    a = float(input("a = "))
+    b = float(input("b = "))
+    cv, dt = hcn(a, b)
+    print("Chu vi:", cv, "Diện tích:", dt)
+
+elif chon == 4:
+    a = float(input("a = "))
+    b = float(input("b = "))
+    c = float(input("c = "))
+    cv, dt = tam_giac(a, b, c)
+    print("Chu vi:", cv, "Diện tích:", dt)

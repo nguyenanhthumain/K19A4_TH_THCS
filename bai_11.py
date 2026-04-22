@@ -1,25 +1,15 @@
-n = int(input("Nhập n: "))
+def nhap():
+    ten = input("Tên: ")
+    toan = float(input())
+    ly = float(input())
+    hoa = float(input())
+    return ten, toan, ly, hoa
 
-test_list = []
-search_tup = []
+def tb(t, l, h):
+    return (t+l+h)/3
 
-print("Nhập test_list:")
-for _ in range(n):
-    a = int(input())
-    b = int(input())
-    test_list.append((a, b))
+def xuat():
+    ten, t, l, h = nhap()
+    print(ten, tb(t, l, h))
 
-print("Nhập search_tup:")
-for _ in range(n):
-    a = int(input())
-    b = int(input())
-    search_tup.append((a, b))
-
-result = []
-
-for t in search_tup:
-    if t in test_list:
-        result.append(test_list.index(t))
-    else:
-        result.append(-1)
-print(result)
+xuat()

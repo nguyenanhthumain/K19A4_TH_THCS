@@ -1,9 +1,8 @@
-while True:
-    m = int(input("Nhập m: "))
-    n = int(input("Nhập n: "))
-    if 0 < m < n:
-        break
-    print("Sai, nhập lại!")
-lst = list(range(m, n+1, 2))[:100]
-print("Danh sách:", lst)
-print("Tổng:", sum(lst))
+def giai_thua(n):
+    kq = 1
+    for i in range(1, n+1):
+        kq *= i
+    return kq
+
+n = int(input("Nhập n: "))
+print(giai_thua(n))

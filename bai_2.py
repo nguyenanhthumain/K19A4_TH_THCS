@@ -1,7 +1,7 @@
-n = int(input("Nhập n: "))
-m = int(input("Nhập m: "))
-lst = [i**2 for i in range(1, n+1)]
-if m >= n:
-    print([])
-else:
-    print(lst[m:])
+def fibonacci():
+    a, b = 0, 1
+    for i in range(20):
+        print(a, end=" ")
+        a, b = b, a + b
+
+fibonacci()
